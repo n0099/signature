@@ -2,7 +2,7 @@ import app from 'flarum/app';
 
 
 app.initializers.add('signature', () => {
-    app.extensionData.for('signature')
+    app.extensionData.for('katosdev-signature')
       .registerSetting({
         setting: 'signature.maximum_image_width',
         type: 'text',
