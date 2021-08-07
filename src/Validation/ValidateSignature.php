@@ -1,6 +1,6 @@
 <?php
 
-namespace XEngine\Signature\Validation;
+namespace katosdev\Signature\Validation;
 
 use Symfony\Component\DomCrawler\Crawler;
 use Flarum\Settings\SettingsRepositoryInterface;
