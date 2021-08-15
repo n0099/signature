@@ -6,7 +6,7 @@ use katosdev\signature;
 use Flarum\User\Access\AbstractPolicy;
 use Flarum\User\User;
 
-class user extends AbstractPolicy
+class UserPolicy extends AbstractPolicy
 {
     public function setSignature(User $actor, string $ability, signature $user)
     {
