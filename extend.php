@@ -42,6 +42,6 @@ return [
         ->subscribe(Model\UserSignatureAttributes::class),
 
     (new Extend\Policy())
-    ->modelPolicy(User::class, UserPolicy::class),
+    ->modelPolicy(User::class, signature::class),
 
 ];

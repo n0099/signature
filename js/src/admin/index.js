@@ -26,7 +26,7 @@ app.initializers.add('signature', () => {
       .registerPermission(
         {
           icon: 'fas fa-image',
-          label: app.translator.trans('signature.admin.permission.set_signature'),
+          label: app.translator.trans('signature.admin.permission.signature.description'),
           permission: 'setSignature',
         },
         'start'

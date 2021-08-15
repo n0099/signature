@@ -6,9 +6,9 @@ use katosdev\signature;
 use Flarum\User\Access\AbstractPolicy;
 use Flarum\User\User;
 
-class signature extends AbstractPolicy
+class user extends AbstractPolicy
 {
-    public function can(User $actor, string $ability, signature $model)
+    public function setSignature(User $actor, string $ability, signature $user)
     {
         if ($actor->hasPermission('setSignature')
         &&
@@ -16,7 +16,7 @@ class signature extends AbstractPolicy
             $actor->id === $user->id
             ||
             (
-                $actor->id !== $user->id && $actor->can('edit', $model)
+                $actor->id !== $user->id && $actor->setSignature('edit', $user)
             )
         )
     )
