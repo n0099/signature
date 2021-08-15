@@ -40,4 +40,8 @@ return [
 
     (new Extend\Event())
         ->subscribe(Model\UserSignatureAttributes::class),
+
+    (new Extend\Policy())
+    ->modelPolicy(User::class, UserPolicy::class),
+
 ];

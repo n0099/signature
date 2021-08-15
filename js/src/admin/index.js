@@ -2,7 +2,7 @@ import app from 'flarum/app';
 
 
 app.initializers.add('signature', () => {
-    app.extensionData.for('katosdev-signature')
+    app.extensionData.for('signature')
       .registerSetting({
         setting: 'signature.maximum_image_width',
         type: 'text',
@@ -23,4 +23,13 @@ app.initializers.add('signature', () => {
         type: 'text',
         label: app.translator.trans('signature.admin.settings.maximum_char_limit.description')
       })
+      .registerPermission(
+        {
+          icon: 'fas fa-image',
+          label: app.translator.trans('signature.admin.permission.set_signature'),
+          permission: 'setSignature',
+        },
+        'start'
+      );
+      
 });
