@@ -5,7 +5,7 @@ import LinkButton from 'flarum/components/LinkButton';
 import UserPage from 'flarum/components/UserPage';
 import CommentPost from 'flarum/components/CommentPost';
 
-app.initializers.add('Xengine-signature', () => {
+app.initializers.add('signature', () => {
     app.routes['settings.signature'] = { path: '/settings/signature', component: SignatureSettings };
 
     extend(UserPage.prototype, 'navItems', function (items) {
@@ -14,7 +14,7 @@ app.initializers.add('Xengine-signature', () => {
           'signature',
           <LinkButton href={app.route('settings.signature')} icon="fas fa-signature"
                       class="Button Button--link hasIcon">
-            {app.translator.trans('Xengine-signature.forum.buttons.signature')}
+            {app.translator.trans('signature.forum.buttons.signature')}
           </LinkButton>,
           -100
         );

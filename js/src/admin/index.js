@@ -22,5 +22,12 @@ app.initializers.add('signature', () => {
         setting: 'signature.maximum_char_limit',
         type: 'text',
         label: app.translator.trans('signature.admin.settings.maximum_char_limit.description')
-      })
+      })  
+      .registerPermission({
+        icon: 'fas fa-image',
+        label: app.translator.trans('signature.admin.permission.set_signature'),
+        permission: 'setSignature',
+      },
+      'start'
+       );
 });
