@@ -9,7 +9,7 @@ app.initializers.add('signature', () => {
     app.routes['settings.signature'] = { path: '/settings/signature', component: SignatureSettings };
 
     extend(UserPage.prototype, 'navItems', function (items) {
-      if (this.user === app.session.user || app.session.user.id() == 1) {
+      if (this.user.id() === app.session.user.id()) {
         items.add(
           'signature',
           <LinkButton href={app.route('settings.signature')} icon="fas fa-signature"
