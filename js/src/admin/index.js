@@ -23,13 +23,5 @@ app.initializers.add('signature', () => {
         type: 'text',
         label: app.translator.trans('signature.admin.settings.maximum_char_limit.description')
       })
-      .registerPermission(
-        {
-          icon: 'fas fa-image',
-          label: app.translator.trans('signature.admin.permission.signature.description'),
-          permission: 'setSignature',
-        },
-        'start'
-      );
       
 });
