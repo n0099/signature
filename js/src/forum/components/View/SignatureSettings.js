@@ -51,7 +51,7 @@ export default class SignatureSettings extends UserPage {
             titleText: app.translator.trans('signature.forum.modal.loading.title'),
             value: app.translator.trans('signature.forum.modal.loading.content'),
         });
-        this.signature = $('.Signature').trumbowyg('html');
+        this.signature = $('.Signature').html();
 
         const data = { signature: this.signature };
 
